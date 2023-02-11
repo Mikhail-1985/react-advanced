@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import { classNames } from "shared/lib/classNames/classNames";
-import cls from './NavBar.module.scss'
-import { AppLink } from "shared/ui/AppLink/AppLink";
+import { Link } from 'react-router-dom';
+import { classNames } from 'shared/lib/classNames/classNames';
+import cls from './NavBar.module.scss';
+import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 // import { ThemeSwitcher } from "shared/ui/ThemeSwitcher";
 
@@ -18,5 +18,5 @@ export function NavBar({ className }: NavBarProps) {
                 <AppLink theme={AppLinkTheme.SECONDARY} to={'/about'}>О сайте</AppLink>
             </div>
         </div>
-    )
+    );
 }
