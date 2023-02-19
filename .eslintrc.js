@@ -29,10 +29,11 @@ module.exports = {
         ],
         'object-curly-spacing': [2, 'always'],
         // '@typescript-eslint/object-curly-spacing': 'warn',
-        'linebreak-style': [
-            'error',
-            'windows'
-        ],
+        // 'linebreak-style': [
+        //     'error',
+        //     'windows'
+        // ],
+        'linebreak-style': 'off',
         'quotes': [
             'error',
             'single'
@@ -42,9 +43,23 @@ module.exports = {
             'always'
         ],
         'react/react-in-jsx-scope': 'off',
-        'i18next/no-literal-string': ['warn', { markupOnly: true }]
+        'i18next/no-literal-string': [
+            'warn', {
+                markupOnly: true,
+                ignoreAttribute: ['data-testid']
+            }
+        ],
+        'max-len': ['error', { 'ignoreComments': true, 'code': 100 }]
     },
     'globals': {
         '__IS__DEV__': true
-    }
+    },
+    'overrides': [
+        {
+            files: ['**/src/**/*test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off'
+            }
+        }
+    ]
 };

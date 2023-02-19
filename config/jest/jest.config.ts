@@ -3,6 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
+import path from 'path';
+
 export default {
     // All imported modules in your tests should be mocked automatically
     // automock: false,
@@ -28,12 +30,22 @@ export default {
         'node'
     ],
     moduleDirectories: [
-        'node_modules'
+        'node_modules',
+        'src'
     ],
     rootDir: '../../',
     testMatch: [
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
     ],
+    modulePaths: ['<rootDir>src'],
+    moduleNameMapper: {
+        '\\.(css|less|scss|sss|styl)$': '<rootDir>/node_modules/jest-css-modules',
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx')
+    },
+    roots: [
+        '<rootDir>/src'
+    ],
+    setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.ts']
 
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
@@ -125,9 +137,6 @@ export default {
     
 
     // A list of paths to directories that Jest should use to search for files in
-    // roots: [
-    //   "<rootDir>"
-    // ],
 
     // Allows you to use a custom runner instead of Jest's default test runner
     // runner: "jest-runner",
