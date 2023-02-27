@@ -49,7 +49,8 @@ module.exports = {
                 ignoreAttribute: ['data-testid']
             }
         ],
-        'max-len': ['error', { 'ignoreComments': true, 'code': 100 }]
+        'max-len': ['error', { 'ignoreComments': true, 'code': 100 }],
+        'react/display-name':'off'
     },
     'globals': {
         '__IS__DEV__': true
