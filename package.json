@@ -15,7 +15,8 @@
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
     "build-storybook": "build-storybook -c ./config/storybook",
     "testui": "npx loki test",
-    "testuiOk": "npx loki approve"
+    "testuiOk": "npx loki approve",
+    "testuici": "loki --requireReference --reactUri file:./storybook-static"
   },
   "keywords": [],
   "author": "",

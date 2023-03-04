@@ -27,3 +27,7 @@ jobs:
         run: npm run lintstyle
       - name: unit testing
         run: npm run unit
+      - name: build storybook
+        run: npm run build-storybook
+      - name: screenshot testing
+        run: npm run testuici
