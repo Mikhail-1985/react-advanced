@@ -1,3 +1,4 @@
+//eslint-disable-next-line
 module.exports = {
     'env': {
         'browser': true,
@@ -10,8 +11,14 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:i18next/recommended'
     ],
-    // 'overrides': [
-    // ],
+    'overrides': [
+        {
+            files: ['**/src/**/*test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off'
+            }
+        }
+    ],
     'parser': '@typescript-eslint/parser',
     'parserOptions': {
         'ecmaVersion': 'latest',
@@ -55,12 +62,12 @@ module.exports = {
     'globals': {
         '__IS__DEV__': true
     },
-    'overrides': [
-        {
-            files: ['**/src/**/*test.{ts,tsx}'],
-            rules: {
-                'i18next/no-literal-string': 'off'
-            }
-        }
-    ]
+    // 'overrides': [
+    //     {
+    //         files: ['**/src/**/*test.{ts,tsx}'],
+    //         rules: {
+    //             'i18next/no-literal-string': 'off'
+    //         }
+    //     }
+    // ]
 };
