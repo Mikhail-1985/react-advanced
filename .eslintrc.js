@@ -10,8 +10,8 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:i18next/recommended'
     ],
-    'overrides': [
-    ],
+    // 'overrides': [
+    // ],
     'parser': '@typescript-eslint/parser',
     'parserOptions': {
         'ecmaVersion': 'latest',
