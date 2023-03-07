@@ -11,7 +11,7 @@
     "linttsfix": "eslint \"**/*.{ts,tsx}\" --fix",
     "lintstyle": "npx stylelint \"**/*.scss\"",
     "lintstylefix": "npx stylelint \"**/*.scss\" --fix",
-    "unit": "jest --config ./config/jest/jest.config.ts",
+    "testunit": "jest --config ./config/jest/jest.config.ts",
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
     "build-storybook": "build-storybook -c ./config/storybook",
     "testui": "npx loki test",
