@@ -16,7 +16,10 @@
     "build-storybook": "build-storybook -c ./config/storybook",
     "testui": "npx loki test",
     "testuiOk": "npx loki approve",
-    "testuici": "loki --requireReference --reactUri file:./storybook-static"
+    "testuici": "loki --requireReference --reactUri file:./storybook-static",
+    "testuireport": "npm run testuijson && npm run testuihtml",
+    "testuijson": "node scripts/generate-visual-json-report.js",
+    "testuihtml": "reg-cli --from .loki/report.json --report .loki/report.html"
   },
   "keywords": [],
   "author": "",
@@ -60,6 +63,7 @@
     "jest-css-modules": "^2.1.0",
     "loki": "^0.31.0",
     "mini-css-extract-plugin": "^2.5.3",
+    "reg-cli": "^0.17.7",
     "regenerator-runtime": "^0.13.9",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
