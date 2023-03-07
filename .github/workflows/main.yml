@@ -28,7 +28,7 @@ jobs:
         run: npm run lintstyle
       - name: unit testing
         if: always()
-        run: npm run unit
+        run: npm run testunit
       - name: build storybook
         if: always()
         run: npm run build-storybook
