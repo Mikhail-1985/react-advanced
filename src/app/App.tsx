@@ -5,6 +5,9 @@ import { AppRouter } from 'app/providers/router';
 import { NavBar } from 'widgets/NavBar';
 import { Sidebar } from 'widgets/Sidebar';
 import { Suspense } from 'react';
+// import { Modal } from 'shared/ui/Modal/Modal';
+// import { Button } from 'shared/ui/Button/Button';
+// import { ButtonTheme } from '../shared/ui/Button/Button';
 
 export const App = () => {
 
@@ -15,7 +18,6 @@ export const App = () => {
     //         throw new Error();
     //     }
     // }, []);
-
     return (<>
         <div className={classNames('app', {}, [theme])}>
             <Suspense fallback=''>

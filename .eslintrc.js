@@ -13,9 +13,10 @@ module.exports = {
     ],
     'overrides': [
         {
-            files: ['**/src/**/*test.{ts,tsx}'],
+            files: ['**/src/**/*{test,stories}.{ts,tsx}'],
             rules: {
-                'i18next/no-literal-string': 'off'
+                'i18next/no-literal-string': 'off',
+                'max-len': 'off'
             }
         }
     ],
@@ -27,13 +28,16 @@ module.exports = {
     'plugins': [
         'react',
         '@typescript-eslint',
-        'i18next'
+        'i18next',
+        'react-hooks'
     ],
     'rules': {
         'indent': [
             'error',
             4
         ],
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'warn',
         'object-curly-spacing': [2, 'always'],
         // '@typescript-eslint/object-curly-spacing': 'warn',
         // 'linebreak-style': [
@@ -57,7 +61,7 @@ module.exports = {
             }
         ],
         'max-len': ['error', { 'ignoreComments': true, 'code': 100 }],
-        'react/display-name':'off'
+        'react/display-name': 'off'
     },
     'globals': {
         '__IS__DEV__': true

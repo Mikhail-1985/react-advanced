@@ -23,6 +23,12 @@ Clear.args = {
     children: 'TEXT',
     theme: ButtonTheme.CLEAR
 };
+export const ClearInverted = Template.bind({});
+ClearInverted.args = {
+    children: 'TEXT',
+    theme: ButtonTheme.CLEAR_INVERTED
+};
+ClearInverted.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const Outline = Template.bind({});
 Outline.args = {
