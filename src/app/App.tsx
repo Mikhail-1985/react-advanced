@@ -4,7 +4,9 @@ import { useTheme } from 'app/providers/ThemeProvider';
 import { AppRouter } from 'app/providers/router';
 import { NavBar } from 'widgets/NavBar';
 import { Sidebar } from 'widgets/Sidebar';
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { userActions } from 'entities/User';
 // import { Modal } from 'shared/ui/Modal/Modal';
 // import { Button } from 'shared/ui/Button/Button';
 // import { ButtonTheme } from '../shared/ui/Button/Button';
@@ -12,6 +14,11 @@ import { Suspense } from 'react';
 export const App = () => {
 
     const { theme } = useTheme();
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(userActions.initAuthData());
+    },[dispatch]);
 
     // useEffect(() => {
     //     if(Math.random() < 0.5){
